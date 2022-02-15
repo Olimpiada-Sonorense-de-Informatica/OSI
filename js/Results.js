@@ -15,12 +15,9 @@ function createTable(data) {
 
 function refreshTable(){
     var array = JSON.parse(localStorage.getItem("Lista"));
-    console.log(array);
-    var arrayN = array.filter(element => function (){
-        console.log(element);
-    })
+    //console.log(array);
     var content = "";
-    arrayN.forEach(function(row) {
+    array.forEach(function(row) {
         content += "<tr>";
         row.forEach(function(cell) {
             content += "<td>" + cell + "</td>" ;
