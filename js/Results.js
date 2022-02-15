@@ -1,5 +1,23 @@
 function createTable(data) {
     var array = parseResult(data)
+    /*
+    var content = "";
+    array.forEach(function(row) {
+        content += "<tr>";
+        row.forEach(function(cell) {
+            content += "<td>" + cell + "</td>" ;
+        });
+        content += "</tr>";
+    });
+    document.getElementById("bodyDinamico").innerHTML = content;*/
+    refreshTable();
+}
+
+function refreshTable(){
+    var arrayOriginal = window.sessionStorage.getItem("Lista");
+    var array = arrayOriginal.filter(element => function (){
+        console.log(element);
+    })
     var content = "";
     array.forEach(function(row) {
         content += "<tr>";
@@ -12,7 +30,7 @@ function createTable(data) {
 }
 
 function parseResult(result) {
-    console.log(result);
+    //console.log(result);
     var resultArray = [];
     result.split("\n").forEach(function(row) {
         var rowArray = [];
@@ -21,5 +39,6 @@ function parseResult(result) {
         });
         resultArray.push(rowArray);
     });
+    window.sessionStorage.setItem("Lista", resultArray);
     return resultArray;
 }
