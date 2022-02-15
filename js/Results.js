@@ -14,13 +14,13 @@ function createTable(data) {
 }
 
 function refreshTable(){
-    var array = window.sessionStorage.getItem("Lista");
+    var array = JSON.parse(localStorage.getItem("Lista"));
     console.log(array);
     var arrayN = array.filter(element => function (){
         console.log(element);
     })
     var content = "";
-    array.forEach(function(row) {
+    arrayN.forEach(function(row) {
         content += "<tr>";
         row.forEach(function(cell) {
             content += "<td>" + cell + "</td>" ;
@@ -40,6 +40,6 @@ function parseResult(result) {
         });
         resultArray.push(rowArray);
     });
-    window.sessionStorage.setItem("Lista", resultArray);
+    localStorage.setItem("Lista", JSON.stringify(resultArray));
     return resultArray;
 }
