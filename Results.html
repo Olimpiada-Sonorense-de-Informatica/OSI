@@ -209,14 +209,7 @@
       <script src="js/Results.js"></script>
       <script>
           $(document).ready(function() {
-            $.ajax({
-                type: "GET",
-                url: "files/example.csv",
-                dataType: "text",
-                success: function(data) {
-                    createTable(data);
-                }
-            });
+                Carga();
             });
           
       </script>
