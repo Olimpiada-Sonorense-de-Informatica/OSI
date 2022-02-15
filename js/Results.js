@@ -14,8 +14,9 @@ function createTable(data) {
 }
 
 function refreshTable(){
-    var arrayOriginal = window.sessionStorage.getItem("Lista");
-    var array = arrayOriginal.filter(element => function (){
+    var array = window.sessionStorage.getItem("Lista");
+    console.log(array);
+    var arrayN = array.filter(element => function (){
         console.log(element);
     })
     var content = "";
