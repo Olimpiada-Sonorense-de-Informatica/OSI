@@ -209,7 +209,14 @@
       <script src="js/Results.js"></script>
       <script>
           $(document).ready(function() {
-                Carga();
+            $.ajax({
+                type: "GET",
+                url: "files/Resultados2022.csv",
+                dataType: "text",
+                success: function(data) {
+                    createTable(data);
+                }
+            });
             });
           
       </script>

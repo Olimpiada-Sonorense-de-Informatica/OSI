@@ -1,14 +1,3 @@
-function Carga(){
-    $.ajax({
-        type: "GET",
-        url: "files/Resultados2022.csv",
-        dataType: "text",
-        success: function(data) {
-            createTable(data);
-        }
-    });
-}
-
 function createTable(data) {
     var array = parseResult(data)
     var content = "";
