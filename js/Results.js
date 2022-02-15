@@ -12,7 +12,7 @@ function createTable(data) {
 }
 
 function parseResult(result) {
-    console.log(data);
+    console.log(result);
     var resultArray = [];
     result.split("\n").forEach(function(row) {
         var rowArray = [];
