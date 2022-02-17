@@ -17,12 +17,19 @@ function refreshTable(){
     var array = JSON.parse(localStorage.getItem("Lista"));
     //console.log(array);
     var content = "";
+    let obj = document.getElementById("txtFiltro").value;
+    console.log(obj);
     array.forEach(function(row) {
-        content += "<tr>";
+        var content1 = "<tr>";
+        var valido = true;
         row.forEach(function(cell) {
-            content += "<td>" + cell + "</td>" ;
+            content1 += "<td>" + cell + "</td>" ;
         });
-        content += "</tr>";
+        content1 += "</tr>";
+        if(content1.indexOf(obj) == -1)
+            valido = false;
+        if(valido)
+            content+=content1;
     });
     document.getElementById("bodyDinamico").innerHTML = content;
 }
@@ -40,3 +47,8 @@ function parseResult(result) {
     localStorage.setItem("Lista", JSON.stringify(resultArray));
     return resultArray;
 }
+
+
+function Filtrar(evt){
+    alert(evt);
+  }
