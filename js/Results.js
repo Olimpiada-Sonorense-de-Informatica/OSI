@@ -18,7 +18,7 @@ function refreshTable(){
     //console.log(array);
     var content = "";
     let obj = document.getElementById("txtFiltro").value;
-    console.log(obj);
+    //console.log(obj);
     array.forEach(function(row) {
         var content1 = "<tr>";
         var valido = true;
