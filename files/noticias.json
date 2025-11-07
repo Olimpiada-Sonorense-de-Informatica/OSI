@@ -11,6 +11,12 @@
       "externo": true
     },
     "icono": "calendar"
+  },
+  {
+    "titulo": "Convocatoria Abierta",
+    "descripcion": [
+      "Ya se encuentra disponible la convocatoria 2026."
+    ],
+    "icono": "edit"
   }
 ]
-
