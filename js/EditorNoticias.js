@@ -3,6 +3,26 @@ let noticias = [];
 let currentNoticiaIndex = -1;
 let currentDescripciones = [];
 
+// Iconos predeterminados más comunes para noticias
+const iconosPredeterminados = [
+    { nombre: 'bullhorn', etiqueta: 'Megáfono' },
+    { nombre: 'calendar', etiqueta: 'Calendario' },
+    { nombre: 'bell', etiqueta: 'Campana' },
+    { nombre: 'info-circle', etiqueta: 'Información' },
+    { nombre: 'star', etiqueta: 'Estrella' },
+    { nombre: 'trophy', etiqueta: 'Trofeo' },
+    { nombre: 'users', etiqueta: 'Usuarios' },
+    { nombre: 'graduation-cap', etiqueta: 'Graduación' },
+    { nombre: 'book', etiqueta: 'Libro' },
+    { nombre: 'laptop-code', etiqueta: 'Código' },
+    { nombre: 'rocket', etiqueta: 'Cohete' },
+    { nombre: 'lightbulb', etiqueta: 'Idea' },
+    { nombre: 'flag', etiqueta: 'Bandera' },
+    { nombre: 'award', etiqueta: 'Premio' },
+    { nombre: 'fire', etiqueta: 'Fuego' },
+    { nombre: 'heart', etiqueta: 'Corazón' }
+];
+
 // Inicialización
 $(document).ready(function() {
     cargarDatos();
@@ -19,6 +39,7 @@ function inicializarEventos() {
     $('#btnGuardarNoticia').on('click', guardarNoticia);
     $('#btnAgregarDescripcion').on('click', agregarLineaDescripcion);
     $('#noticiaIcono').on('input', actualizarVistaPreviewIcono);
+    $('#usarIconoPersonalizado').on('change', toggleIconoPersonalizado);
 }
 
 function cargarDatos() {
@@ -120,11 +141,27 @@ function abrirModalNoticia(index = -1) {
     currentNoticiaIndex = index;
     currentDescripciones = [];
     
+    // Renderizar grid de iconos
+    renderizarIconosGrid();
+    
     if (index >= 0) {
         const noticia = noticias[index];
         $('#modalNoticiaTitle').text('Editar Noticia');
         $('#noticiaTitulo').val(noticia.titulo || '');
-        $('#noticiaIcono').val((noticia.icono || '').replace(/^fa-/, ''));
+        
+        const iconoActual = (noticia.icono || '').replace(/^fa-/, '');
+        const iconoEnLista = iconosPredeterminados.find(i => i.nombre === iconoActual);
+        
+        if (iconoEnLista) {
+            // Icono está en la lista predeterminada
+            $('#usarIconoPersonalizado').prop('checked', false);
+            $('#noticiaIcono').hide();
+            seleccionarIcono(iconoActual);
+        } else {
+            // Icono personalizado
+            $('#usarIconoPersonalizado').prop('checked', true);
+            $('#noticiaIcono').val(iconoActual).show();
+        }
         
         currentDescripciones = [...(noticia.descripcion || [])];
         
@@ -140,12 +177,62 @@ function abrirModalNoticia(index = -1) {
     } else {
         $('#modalNoticiaTitle').text('Agregar Noticia');
         $('#formNoticia')[0].reset();
+        $('#usarIconoPersonalizado').prop('checked', false);
+        $('#noticiaIcono').hide();
         currentDescripciones = [];
+        // Seleccionar el primer icono por defecto
+        seleccionarIcono('bullhorn');
     }
     
     renderizarDescripciones();
     actualizarVistaPreviewIcono();
     $('#modalNoticia').modal('show');
+}
+
+function renderizarIconosGrid() {
+    const grid = $('#iconosGrid');
+    grid.empty();
+    
+    iconosPredeterminados.forEach(icono => {
+        const col = $(`
+            <div class="col-3 col-md-2 p-1">
+                <div class="icon-option" data-icon="${icono.nombre}">
+                    <i class="fas fa-${icono.nombre}"></i>
+                    <small>${icono.etiqueta}</small>
+                </div>
+            </div>
+        `);
+        
+        col.find('.icon-option').on('click', function() {
+            if (!$('#usarIconoPersonalizado').is(':checked')) {
+                seleccionarIcono(icono.nombre);
+            }
+        });
+        
+        grid.append(col);
+    });
+}
+
+function seleccionarIcono(nombreIcono) {
+    $('.icon-option').removeClass('active');
+    $(`.icon-option[data-icon="${nombreIcono}"]`).addClass('active');
+    actualizarVistaPreviewIcono();
+}
+
+function toggleIconoPersonalizado() {
+    const usar = $('#usarIconoPersonalizado').is(':checked');
+    
+    if (usar) {
+        $('#noticiaIcono').show();
+        $('.icon-option').removeClass('active').css('opacity', '0.5');
+    } else {
+        $('#noticiaIcono').hide();
+        $('.icon-option').css('opacity', '1');
+        // Seleccionar el primero si no hay ninguno seleccionado
+        if ($('.icon-option.active').length === 0) {
+            seleccionarIcono('bullhorn');
+        }
+    }
 }
 
 function renderizarDescripciones() {
@@ -194,7 +281,15 @@ function eliminarDescripcion(index) {
 }
 
 function actualizarVistaPreviewIcono() {
-    const iconSlug = $('#noticiaIcono').val().replace(/^fa-/, '') || 'question-circle';
+    let iconSlug;
+    
+    if ($('#usarIconoPersonalizado').is(':checked')) {
+        iconSlug = $('#noticiaIcono').val().replace(/^fa-/, '') || 'question-circle';
+    } else {
+        const iconoActivo = $('.icon-option.active').data('icon');
+        iconSlug = iconoActivo || 'question-circle';
+    }
+    
     $('#iconPreview').html(`<i class="fas fa-${iconSlug} text-primary"></i>`);
 }
 
@@ -210,10 +305,18 @@ function guardarNoticia() {
         return;
     }
 
+    let iconoFinal;
+    if ($('#usarIconoPersonalizado').is(':checked')) {
+        iconoFinal = $('#noticiaIcono').val().trim().replace(/^fa-/, '') || 'bullhorn';
+    } else {
+        const iconoActivo = $('.icon-option.active').data('icon');
+        iconoFinal = iconoActivo || 'bullhorn';
+    }
+
     const noticia = {
         titulo: titulo,
         descripcion: currentDescripciones,
-        icono: $('#noticiaIcono').val().trim().replace(/^fa-/, '') || 'bullhorn'
+        icono: iconoFinal
     };
 
     const ctaTexto = $('#ctaTexto').val().trim();
