@@ -10048,7 +10048,8 @@ img::-moz-selection {
 #mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  background-color: #212529;
+  background-color: rgba(255, 255, 255, 0.95);
+  transition: background-color 0.3s ease;
 }
 #mainNav .navbar-toggler {
   padding: 0.75rem;
@@ -10071,9 +10072,10 @@ img::-moz-selection {
 }
 #mainNav .navbar-nav .nav-item .nav-link {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: black;
   letter-spacing: 0.0625em;
+  white-space: nowrap;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
   
@@ -10085,13 +10087,28 @@ img::-moz-selection {
 
 }
 
+@media (max-width: 991.98px) {
+  #mainNav .navbar-collapse {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 1rem 0;
+  }
+
+  #mainNav .navbar-nav .nav-item .nav-link {
+    color: #212529;
+  }
+
+  #mainNav .navbar-nav .nav-item .nav-link.btn {
+    color: #fff !important;
+  }
+}
+
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     border: none;
-    background-color: transparent;
-    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.95);
+    transition: padding-top 0.3s ease-in-out, padding-bottom 0.3s ease-in-out, background-color 0.3s ease-in-out;
   }
   #mainNav .navbar-brand {
     font-size: 1.5em;
@@ -10109,7 +10126,7 @@ img::-moz-selection {
   #mainNav.navbar-shrink {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    background-color: #97CBDC;
+    background-color: rgba(151, 203, 220, 0.95);
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;

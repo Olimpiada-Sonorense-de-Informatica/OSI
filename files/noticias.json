@@ -1,0 +1,16 @@
+[
+  {
+    "titulo": "Mantente en contacto",
+    "descripcion": [
+      "Únete al canal de Discord.",
+      "El día 29 de Noviembre comienzan las sesiones virtuales en el servidor de Discord."
+    ],
+    "cta": {
+      "texto": "Unirme",
+      "url": "https://discord.gg/p86vwfBW",
+      "externo": true
+    },
+    "icono": "calendar"
+  }
+]
+

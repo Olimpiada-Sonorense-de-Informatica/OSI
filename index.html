@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
+        <meta name="description" content="Olimpiada Sonorense de Informática (OSI) - Concurso estatal para jóvenes con facilidad para resolver problemas mediante la lógica y programación. Promueve el desarrollo tecnológico en Sonora." />
+        <meta name="author" content="Olimpiada Sonorense de Informática" />
+        <meta name="keywords" content="OSI, Olimpiada Sonorense de Informática, programación competitiva, Sonora, informática, olimpiada, programación" />
         <title>Olimpiada Sonorense de Informática</title>
         <link rel="icon" type="image/x-icon" href="assets/img/logoOsi.ico" />
         <!-- Font Awesome icons (free version)-->
@@ -116,15 +117,75 @@
             @media only screen and (max-width: 300px) {
               .prev, .next,.text {font-size: 11px}
             }
-            </style>
+            
+            /* Navbar brand styles */
+            .navbar-brand-logo {
+                font-size: 40px;
+                font-weight: bold;
+            }
+            
+            .navbar-brand-logo img {
+                height: 50px;
+                margin-right: 10px;
+                vertical-align: middle;
+            }
+            
+            /* Navbar button styles */
+            .nav-link.btn {
+                margin-left: 5px;
+                color: white !important;
+            }
+            
+            /* Section spacing */
+            .section-spacer {
+                height: 100px;
+            }
+            
+            /* Noticias section */
+            .noticias-title {
+                color: red;
+            }
+            
+            /* Slideshow images */
+            .slideshow-container img {
+                width: 100%;
+            }
+            
+            /* Slideshow dots container */
+            .slideshow-dots {
+                text-align: center;
+            }
+            
+            /* Slide animation helpers */
+            [data-animate] {
+                opacity: 0;
+                transform: translateY(30px);
+                transition: opacity 0.6s ease, transform 0.6s ease;
+            }
+
+            [data-animate].is-visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .timeline-participante {
+                display: block;
+                margin-bottom: 0.35rem;
+            }
+
+            .timeline-participante:last-child {
+                margin-bottom: 0;
+            }
+        </style>
     </head>
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <!-- Aqui deberia de poner el logo de la OSI con el nombre completo
-                esto estaba antes img src="assets/img/logsi.svg" alt="" -->
-                <a class="navbar-brand js-scroll-trigger" style="font-size: 40px;" href="#page-top">OSI</a>
+                <a class="navbar-brand navbar-brand-logo js-scroll-trigger" href="#page-top">
+                    <img src="assets/img/logsi.svg" alt="Logo Olimpiada Sonorense de Informática" />
+                    OSI
+                </a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars ml-1"></i>
@@ -136,94 +197,59 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Podio</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Equipo</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contáctanos</a></li>
-                        <li class="nav-item"><a class="nav-link btn btn-info" href="Temario.html" style="color: white;">Temario</a></li>
-                        <!--<li class="nav-item"><a class="nav-link btn btn-success" href="Results.html" style="color: white;">Resultados</a></li>-->
-                        <li class="nav-item"><a class="nav-link btn btn-success" id="btnConvocatoria" style="color: white;">Convocatoria</a></li>
-                        <li class="nav-item"><a class="nav-link btn btn-success" id="btnRegistro" href="Registro.html" style="color: white;">Registro</a></li>
+                        <li class="nav-item"><a class="nav-link btn btn-info" href="Temario.html">Temario</a></li>
+                        <li class="nav-item"><a class="nav-link btn btn-success" id="btnConvocatoria">Convocatoria</a></li>
+                        <li class="nav-item"><a class="nav-link btn btn-success" id="btnRegistro" href="Registro.html">Registro</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <!-- Masthead-->
-        <!--<header class="masthead">
-            <div class="container">
-                <div class="masthead-heading text-uppercase" style="opacity: 0;">Olimpiada Sonorense de Informática aaaa
-                aaaaaaaaaaaaaaaaaaaaaa</div>
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Acerca de</a>
-            </div>
-        </header>-->
         <!-- Services-->
-        <div style="height: 100px;">
+        <div class="section-spacer"></div>
 
-        </div>
-
-        <section class="page-section" id="advise">
+        <section class="page-section" id="advise" data-animate="fade-up">
             <div class="container">
                 <div class="text-center">
-                    <h2 style="color:red">NOTICIAS</h2>
+                    <h2 class="noticias-title">NOTICIAS</h2>
                     <hr>
                 </div>
-                <div class="row text-center">
-                    <div class="col-md-12">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-calendar fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <!--<h4 class="my-3">Convocatoria OSI 2025</h4>
-                        <p class="text-muted">
-                            Ya se encuentra disponible la convocatoria para la 18° Olimpiada Sonorense de Informática 2025. Regístrate! 
-                            <br><br> <a href="files/Convocatoria_OSI_2025.pdf" download="Convocatoria OSI 2025" target="_blank" class="btn btn-info">Descargar Convocatoria 2025 (PDF)</a>
-                            <br><br> <a href="assets/img/Convocatoria2025.png" download="Convocatoria OSI 2025" target="_blank" class="btn btn-info">Descargar Convocatoria 2025 (PNG)</a>
-                        </p>-->
-                        <!--<img src="assets/img/segundofiltro.jpg">-->
-                        <h4 class="my-3">Mantente en contacto</h4>
-                        <p class="text-muted">
-                            Únete al canal de Discord. 
-                            <br>El día 29 de Noviembre comienzan las sesiones virtuales en el servidor de discord.
-                            <br><br><a href="https://discord.gg/p86vwfBW" target="_blank" class="btn btn-info">Unirme</a>
-                        </p>
-                        <br>
-                    </div>
-                </div>
+                <div class="row text-center" id="noticias-container"></div>
+                <div class="text-center text-muted" id="noticias-empty" hidden>Pronto tendremos noticias para compartir.</div>
             </div>
         </section>
 
-        <div class="slideshow-container">
+        <div class="slideshow-container" data-animate="fade-up">
 
             <div class="mySlides fade1">
-              <img src="assets/img/header-bg.jpg" style="width:100%">
-            </div>
-
-            <!--<div class="mySlides fade1">
-                <div class="numbertext">1 / 3</div>
-                <img src="assets/img/convocatoria-osi.png" style="width:100%">
-              </div>-->
-            
-            <div class="mySlides fade1">
-              <img src="assets/img/portfolio/Medallas.jpg" style="width:100%">
+              <img src="assets/img/header-bg.jpg" alt="Olimpiada Sonorense de Informática">
             </div>
             
             <div class="mySlides fade1">
-              <img src="assets/img/portfolio/Taller.jpg" style="width:100%">
+              <img src="assets/img/portfolio/Medallas.jpg" alt="Medallas OSI" loading="lazy" decoding="async">
             </div>
+            
             <div class="mySlides fade1">
-                <img src="assets/img/portfolio/Del2023.png" style="width:100%">
+              <img src="assets/img/portfolio/Taller.jpg" alt="Taller OSI" loading="lazy" decoding="async">
+            </div>
+            
+            <div class="mySlides fade1">
+                <img src="assets/img/portfolio/Del2023.png" alt="Delegación OSI 2023" loading="lazy" decoding="async">
               </div>
             
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
             
         </div>
-            <br>
+        <br>
             
-        <div style="text-align:center">
+        <div class="slideshow-dots">
             <span class="dot" onclick="currentSlide(1)"></span> 
             <span class="dot" onclick="currentSlide(2)"></span> 
             <span class="dot" onclick="currentSlide(3)"></span>
             <span class="dot" onclick="currentSlide(4)"></span>  
         </div>
 
-        <section class="page-section" id="services">
+        <section class="page-section" id="services" data-animate="fade-up">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">¿Qué es la OSI?</h2>
@@ -263,19 +289,16 @@
                 </div>
             </div>
         </section>
-        
-        <!--AQUI ESTABA LA SECCION DE PORTAFOLIO-->
 
-
-        <!-- Nuestra historia-->
-        <section class="page-section" id="about">
+        <!-- Podio / Nuestra historia-->
+        <section class="page-section" id="about" data-animate="fade-up">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Podio</h2>
                     <h3 class="section-subheading text-muted">Conoce a nuestros medallistas nacionales.</h3>
                 </div>
-                <ul class="timeline">
-                    <li class="timeline-inverted">
+                <ul class="timeline" id="timeline">
+                    <li class="timeline-inverted timeline-hero" data-animate="fade-up">
                         <div class="timeline-image">
                             <h4>
                                 ¡Tú puedes 
@@ -285,262 +308,12 @@
                                 en héroe!
                             </h4>
                         </div>
-                        
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/gdl.png" alt="" /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4><a href="https://www.olimpiadadeinformatica.org.mx/Resultados/Olimpiada/Resultados?clave=30" target="_blank">Guadalajara - 2025</a></h4>
-                                <!--<h4 class="subheading">Our Humble Beginnings</h4>-->
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_6064">Allison Avril Morales Gracian</a> - <img src="assets/img/iconos/bronce.png" width="23px" alt="Bronce"></img></p>
-                                <p>Ángel Iván Hernández Maya</p>
-                                <p>Vannia Magdalena García Castañeda</p>
-                            </p></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="" /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4><a href="https://www.olimpiadadeinformatica.org.mx/Resultados/Olimpiada/Resultados?clave=29" target="_blank">En linea - 2024</a></h4>
-                                <!--<h4 class="subheading">Our Humble Beginnings</h4>-->
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_6064">Allison Avril Morales Gracian</a>  - <img src="assets/img/iconos/bronce.png" width="23px" alt="Bronce"></img></p>
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_15181">David Alberto Valdez Tafoya</a> - <img src="assets/img/iconos/bronce.png" width="23px" alt="Bronce"></img></p>
-                                <p>Mariana Itzel Ayala Pinto </p>
-                                <p>Joshua David Tominaga Nuñez </p>
-                            </p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/cdmx.jpg" alt="" /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4><a href="https://www.olimpiadadeinformatica.org.mx/Resultados/Olimpiada/Resultados?clave=28" target="_blank">Ciudad de México - 2023</a></h4>
-                                <!--<h4 class="subheading">Our Humble Beginnings</h4>-->
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_6064">Allison Avril Morales Gracian</a> - <img src="assets/img/iconos/bronce.png" width="23px" alt="Bronce"></img></p>
-                                <p>Damián Alejandro García Oceguera</p>
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=278413">Gabriel Alejandro López Torres</a> - <img src="assets/img/iconos/bronce.png" width="23px" alt="Bronce"></img></p>
-                                <p>Omar Osvaldo Robles Osuna</p>
-                            </p></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="" /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4><a href="https://www.olimpiadadeinformatica.org.mx/Resultados/Olimpiada/Resultados?clave=27" target="_blank">En linea - 2022</a></h4>
-                                <!--<h4 class="subheading">Our Humble Beginnings</h4>-->
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_6064">Allison Avril Morales Gracian</a> - <img src="assets/img/iconos/bronce.png" width="23px" alt="Bronce"></img></p>
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=278413">Gabriel Alejandro López Torres</a> - <img src="assets/img/iconos/bronce.png" width="23px" alt="Bronce"></img></p>
-                                <p>Gabriel José Gallardo Favela</p>
-                                <p>Jimena De la Luz Gracia</p>
-                                <p>José Daniel Valles Cervantes</p>
-                            </p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="" /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4><a href="https://www.olimpiadadeinformatica.org.mx/Resultados/Olimpiada/Resultados?clave=26" target="_blank">En linea - 2021</a></h4>
-                                <!--<h4 class="subheading">Our Humble Beginnings</h4>-->
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_5392">Moroni Mariscal Zozaya</a> - <img src="assets/img/iconos/plata.png" width="23px" alt="Plata"></img></p>
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_6070">Fausto Misael Medina Lugo</a> - <img src="assets/img/iconos/bronce.png" width="23px" alt="Bronce"></img></p>
-                                <p>Allison Avril Morales Gracian</p>
-                                <p>Armando Orozco Villegas</p>
-                            </p></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="" /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4><a href="https://www.olimpiadadeinformatica.org.mx/Resultados/Olimpiada/Resultados?clave=25" target="_blank">En linea - 2020</a></h4>
-                                <!--<h4 class="subheading">Our Humble Beginnings</h4>-->
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_4642">Abraham Eduardo Quintana García</a> - <img src="assets/img/iconos/plata.png" width="23px" alt="Plata"></img></p>
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_5392">Moroni Mariscal Zozaya</a> - <img src="assets/img/iconos/bronce.png" width="23px" alt="Bronce"></img></p>
-                                <p>Martín Alain Aguirre Hernández</p>
-                                <p>Diego Sánchez Luna</p>
-                            </p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/culiacan.jpg" alt="" /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4><a href="https://www.olimpiadadeinformatica.org.mx/Resultados/Olimpiada/Resultados?clave=24" target="_blank">Culiacán, Sinaloa - 2019</a></h4>
-                                <!--<h4 class="subheading">An Agency is Born</h4>-->
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_5128">Marco Antonio Jimenez Sotomayor</a> - <img src="assets/img/iconos/plata.png" width="23px" alt="Plata"></img></p>
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_5170">María Milagros Villa Álvarez</a> - <img src="assets/img/iconos/bronce.png" width="23px" alt="Bronce"></img></p>
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_4642">Abraham Eduardo Quintana García</a> - <img src="assets/img/iconos/bronce.png" width="23px" alt="Bronce"></img></p>
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_4645">Manuel Eduardo Ochoa Obezo</a> - <img src="assets/img/iconos/bronce.png" width="23px" alt="Bronce"></img></p>
-                            </p></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/cdmx.jpg" alt="" /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4><a href="https://www.olimpiadadeinformatica.org.mx/Resultados/Olimpiada/Resultados?clave=23" target="_blank">Ciudad de México - 2018</a></h4>
-                                <!--<h4 class="subheading">Transition to Full Service</h4>-->
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_4651">Luis Juventino Velasquez Hidalgo</a> – <img src="assets/img/iconos/bronce.png" width="23px" alt="Bronce"></img></p>
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=187389">Ernesto Adrian Alvarez Salazar</a> – <img src="assets/img/iconos/bronce.png" width="23px" alt="Bronce"></img></p>
-                                <p>Abraham Eduardo Quintana García</p>
-                                <p>Manuel Eduardo Ochoa Obezo</p>
-                            </p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/queretaro.jpg" alt="" /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4><a href="https://www.olimpiadadeinformatica.org.mx/Resultados/Olimpiada/Resultados?clave=22" target="_blank">Querétaro, Querétaro - 2017</a></h4>
-                                <!--<h4 class="subheading">Phase Two Expansion</h4>-->
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">
-                                <p>Marlene Rodriguez Harms</p>
-                                <p>Lizbeth Ortiz López</p>
-                                <p>Daniel Adolfo Trinidad Reyes</p>
-                                <p>Gladys Patricia Vega Corral</p>
-                            </p></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/veracruz.jfif" alt="" /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4><a href="https://www.olimpiadadeinformatica.org.mx/Resultados/Olimpiada/Resultados?clave=21" target="_blank">Veracruz, Veracruz - 2016</a></h4>
-                                <!--<h4 class="subheading">Our Humble Beginnings</h4>-->
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_1927">Jesús Alejandro Leyva Guerrero</a> - <img src="assets/img/iconos/plata.png" width="23px" alt="Plata"></img></p>
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_2494">José Manuel García Obezo</a> - <img src="assets/img/iconos/bronce.png" width="23px" alt="Bronce"></img></p>
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_1792">Pedro Sandoval Torres</a> - <img src="assets/img/iconos/bronce.png" width="23px" alt="Bronce"></img></p>
-                                <p>José Fernando Parra Rodríguez</p>
-                            </p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/chihuahua.png" alt="" /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4><a href="https://www.olimpiadadeinformatica.org.mx/Resultados/Olimpiada/Resultados?clave=20" target="_blank">Chihuahua, Chihuahua - 2015</a></h4>
-                                <!--<h4 class="subheading">An Agency is Born</h4>-->
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_1582">Estefany Velarde Cruz</a> - <img src="assets/img/iconos/bronce.png" width="23px" alt="Bronce"></img></p>
-                                <p>Pedro Sandoval Torres</p>
-                                <p>José Fernando Parra Rodríguez</p>
-                                <p>José Andrés Barceló Fimbres</p>
-                            </p></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/pachuca.jfif" alt="" /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4><a href="https://www.olimpiadadeinformatica.org.mx/Resultados/Olimpiada/Resultados?clave=19" target="_blank">Pachuca, Hidalgo - 2014</a></h4>
-                                <!--<h4 class="subheading">Transition to Full Service</h4>-->
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_2269">German Alonso Garcia Estrella</a> – <img src="assets/img/iconos/bronce.png" width="23px" alt="Bronce"></img></p>
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_2266">Daniel Rodrigo Zazueta Solano</a> – <img src="assets/img/iconos/bronce.png" width="23px" alt="Bronce"></img></p>
-                                <p>Jose Andres Barcelo Fimbres</p>
-                                <p>Rafael Alan Orozco Mulfinger</p>
-                            </p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/toluca.jpg" alt="" /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4><a href="https://www.olimpiadadeinformatica.org.mx/Resultados/Olimpiada/Resultados?clave=18" target="_blank">Toluca, Estado de México - 2013</a></h4>
-                                <!--<h4 class="subheading">Phase Two Expansion</h4>-->
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_3043">Luis Carlos Herrera Ríos</a> – <img src="assets/img/iconos/plata.png" width="23px" alt="Plata"></img></p>
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=30888">Manuel Alejandro Quintana García</a> – <img src="assets/img/iconos/plata.png" width="23px" alt="Plata"></img></p>
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_3046">Jesús Martín Soto Cruz</a> – <img src="assets/img/iconos/bronce.png" width="23px" alt="Bronce"></img></p>
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_3049">Hazziel Alejandro Estrella Moroyoqui</a> – <img src="assets/img/iconos/bronce.png" width="23px" alt="Bronce"></img></p>
-                            </p></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/hermosillo.jpg" alt="" /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4><a href="https://www.olimpiadadeinformatica.org.mx/Resultados/Olimpiada/Resultados?clave=17" target="_blank">Hermosillo, Sonora - 2012</a></h4>
-                                <!--<h4 class="subheading">Our Humble Beginnings</h4>-->
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=30888">Manuel Alejandro Quintana García</a> – <img src="assets/img/iconos/plata.png" width="23px" alt="Plata"></img></p>
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_3049">Hazziel Alejandro Estrella Moroyoqui</a> – <img src="assets/img/iconos/bronce.png" width="23px" alt="Bronce"></img></p>
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_3043">Luis Carlos Herrera Ríos</a> – <img src="assets/img/iconos/bronce.png" width="23px" alt="Bronce"></img></p>
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_3244">Eimy Sandoval Torres</a> – <img src="assets/img/iconos/bronce.png" width="23px" alt="Bronce"></img></p>
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_3247">Fredy Alberto Cruz Beltrán</a> – <img src="assets/img/iconos/bronce.png" width="23px" alt="Bronce"></img></p>
-                                <p>Jesús Martín Soto Cruz</p>
-                            </p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/cuernavaca.jpg" alt="" /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4><a href="https://www.olimpiadadeinformatica.org.mx/Resultados/Olimpiada/Resultados?clave=16" target="_blank">Cuernavaca, Morelos - 2011</a></h4>
-                                <!--<h4 class="subheading">An Agency is Born</h4>-->
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_3295">Joel Alexis Bustamante Calvario</a> – <img src="assets/img/iconos/plata.png" width="23px" alt="Plata"></img></p>
-                            </p></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/merida.jpg" alt="" /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4><a href="https://www.olimpiadadeinformatica.org.mx/Resultados/Olimpiada/Resultados?clave=15" target="_blank">Mérida, Yucatán - 2010</a></h4>
-                                <!--<h4 class="subheading">Transition to Full Service</h4>-->
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_3295">Joel Alexis Bustamante Calvario</a> – <img src="assets/img/iconos/bronce.png" width="23px" alt="Bronce"></img></p>
-                            </p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/colima.jpg" alt="" /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4><a href="https://www.olimpiadadeinformatica.org.mx/Resultados/Olimpiada/Resultados?clave=14" target="_blank">Colima, Colima - 2009</a></h4>
-                                <!--<h4 class="subheading">Phase Two Expansion</h4>-->
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_3514">Efrain Galaviz Chaparro</a> – <img src="assets/img/iconos/bronce.png" width="23px" alt="Bronce"></img></p>
-                                <p><a target="_blank" href="https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_3523">Mario Octavio Sabori Tautimez</a> – <img src="assets/img/iconos/bronce.png" width="23px" alt="Bronce"></img></p>
-                            </p></div>
-                        </div>
                     </li>
                 </ul>
             </div>
         </section>
         <!-- Team-->
-        <section class="page-section bg-light" id="team">
+        <section class="page-section bg-light" id="team" data-animate="fade-up">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">
@@ -549,27 +322,9 @@
                         brindarte las mejores herramientas para que también tu puedas convertirte en un héroe.</h3>
                 </div>
                 <div class="row">
-                    <!--
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/imgliz.jpg" alt="" />
-                            <h4>Lizbeth Ortiz López</h4>
-                            <p class="text-muted">Estudiante de Ingeniería en Sistemas Computacionales</p>
-                            <p class="text-muted">Relaciones Públicas</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/imgmarlene.jpg" alt="" />
-                            <h4>Marlene Rodríguez Harms</h4>
-                            <p class="text-muted">Estudiante de Ingeniería en Sistemas Computacionales</p>
-                            <p class="text-muted">Equipo Académico</p>
-                        </div>
-                    </div>
-                    -->
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/imgandy.jpg" alt="" />
+                            <img class="mx-auto rounded-circle" src="assets/img/team/imgandy.jpg" alt="Andrea Karolina Andujo Vega" loading="lazy" decoding="async" />
                             <h4>Andrea Karolina Andujo Vega</h4>
                             <p class="text-muted">Ingeniero en Tecnologías Computacionales</p>
                             <p class="text-muted">Diseño y Marketing</p>
@@ -577,7 +332,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/imgfernando.png" alt="" />
+                            <img class="mx-auto rounded-circle" src="assets/img/team/imgfernando.png" alt="José Fernando Parra Rodríguez" loading="lazy" decoding="async" />
                             <h4>José Fernando Parra Rodríguez</h4>
                             <p class="text-muted">Ingeniero en Software</p>
                             <p class="text-muted">Desarrollo y Equipo Académico</p>
@@ -585,7 +340,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/imgneto.jpg" alt="" />
+                            <img class="mx-auto rounded-circle" src="assets/img/team/imgneto.jpg" alt="Ernesto Adrián Álvarez Salazar" loading="lazy" decoding="async" />
                             <h4>Ernesto Adrián Álvarez Salazar</h4>
                             <p class="text-muted">Ingeniero en Tecnologías Computacionales</p>
                             <p class="text-muted">Líder Estatal y Subdirector Académico</p>
@@ -593,52 +348,23 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/imgmauel.jpg" alt="" />
+                            <img class="mx-auto rounded-circle" src="assets/img/team/imgmauel.jpg" alt="Manuel Alejandro Quintana García" loading="lazy" decoding="async" />
                             <h4>Manuel Alejandro Quintana García</h4>
                             <p class="text-muted">Maestro en Ciencias de la Ingeniería</p>
                             <p class="text-muted">Delegado Estatal y Director Académico</p>
                         </div>
                     </div>
-                    <!--
                     <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/imgalex.jpg" alt="" />
-                            <h4>Jesús Alejandro Leyva Guerrero</h4>
-                            <p class="text-muted">Estudiante de Ingeniería en Sistemas Computacionales</p>
-                            <p class="text-muted">Desarrollo y Equipo Académico</p>
-                        </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/imgmanuel.jpg" alt="" />
-                            <h4>José Manuel García Obezo</h4>
-                            <p class="text-muted">Estudiante de Ingeniería en Sistemas Computacionales</p>
-                            <p class="text-muted">Desarrollo y Equipo Académico</p>
-                        </div>
-                    </div>
-                    
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/daniel.jpg" alt="" />
-                            <h4>Daniel Edmundo Arce Molina</h4>
-                            <p class="text-muted">Estudiante de Ingeniería en Tecnologías Computacionales</p>
-                            <p class="text-muted">Equipo Académico</p>
-                        </div>
-                    </div>
-                    -->
-                    <div class="col-lg-4">
-                        <!--AQUI Esto es para que estuviera centrada a de enmedio-->
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/imgRamon.jpg" alt="" />
+                            <img class="mx-auto rounded-circle" src="assets/img/team/imgRamon.jpg" alt="Mtro. Ramón Alberto Leyva Rodríguez" loading="lazy" decoding="async" />
                             <h4>Mtro. Ramón Alberto Leyva Rodríguez</h4>
                             <p class="text-muted">Profesor de Tiempo Completo</p>
                             <p class="text-muted">Codelegado Estatal</p>
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <!--AQUI Esto es para que estuviera centrada a de enmedio-->
                     </div>
                 </div>
                 <div class="row">
@@ -649,43 +375,8 @@
                 </div>
             </div>
         </section>
-        <!--AQUI ESTABA UNA IMAGEN DONDE PODEMOS AGREGAR LOS LOGOS DE NUESTROS PATROCINADORES-->
         <!-- Contact-->
-        <section class="page-section" id="contact">
-            <!--<div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Contáctanos</h2>
-                    <h3 class="section-subheading text-muted">¿Tienes alguna duda? No olvides hacernola saber, con gusto te ayudaremos.</h3>
-                </div>
-                <form id="contactForm" name="sentMessage" novalidate="novalidate">
-                    <div class="row align-items-stretch mb-5">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input class="form-control" id="name" type="text" placeholder="Tu nombre *" required="required" data-validation-required-message="Please enter your name." />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="form-group">
-                                <input class="form-control" id="email" type="email" placeholder="Tu correo *" required="required" data-validation-required-message="Please enter your email address." />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="form-group mb-md-0">
-                                <input class="form-control" id="phone" type="tel" placeholder="Tu numero telefonico *" required="required" data-validation-required-message="Please enter your phone number." />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group form-group-textarea mb-md-0">
-                                <textarea class="form-control" id="message" placeholder="Tu mensaje *" required="required" data-validation-required-message="Please enter a message."></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-center">
-                        <div id="success"></div>
-                        <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Enviar Mensaje</button>
-                    </div>
-                </form>
-            </div>-->
+        <section class="page-section" id="contact" data-animate="fade-up">
             <div class="container">
                 <div class="text-center">
                     <a href="mailto:informacion@osi.com.mx" class="btn btn-info">Contáctanos</a>
@@ -697,10 +388,10 @@
         <footer class="footer py-4">
             <div class="container">
                 <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-left">Copyright © Olimpiada Sonorense de Informática 2021</div>
+                    <div class="col-lg-4 text-lg-left">Copyright © Olimpiada Sonorense de Informática 2026</div>
                     <div class="col-lg-4 my-3 my-lg-0">
                         <!--<a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>-->
-                        <a class="btn btn-dark btn-social mx-2" href="https://web.facebook.com/ComiteOSI/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://web.facebook.com/ComiteOSI/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
                         <!--<a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>-->
                     </div>
                     <div class="col-lg-4 text-lg-right">
@@ -711,20 +402,23 @@
             </div>
         </footer>
 
-        <!-- Modal -->
-<div class="modal fade" id="modalConvocatoria" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        <img class="modal-content" id="imgConvocatoria" src="assets/img/Convocatoria2026.png">
-      </div>
-    </div>
-  </div>
+        <!-- Modal Convocatoria -->
+        <div class="modal fade" id="modalConvocatoria" tabindex="-1" role="dialog" aria-labelledby="modalConvocatoriaLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalConvocatoriaLabel">Convocatoria OSI 2026</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <img class="img-fluid" id="imgConvocatoria" src="assets/img/Convocatoria2026.png" alt="Convocatoria Olimpiada Sonorense de Informática 2026" loading="lazy" decoding="async">
+                    </div>
+                </div>
+            </div>
+        </div>
 
-        
-        <!--AQUI ESTABN LOSL MODALES-->
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -735,44 +429,12 @@
         <script src="assets/mail/contact_me.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
-        
-        <script>
-        $(document).ready(function(){
-            $(document).on("click", "#btnConvocatoria", function(){
-                $("#modalConvocatoria").modal("show");
-            });
-
-            //$("#modalConvocatoria").modal("show");
-        });
-        </script>
-        <script>
-            var slideIndex = 1;
-            showSlides(slideIndex);
-            
-            function plusSlides(n) {
-              showSlides(slideIndex += n);
-            }
-            
-            function currentSlide(n) {
-              showSlides(slideIndex = n);
-            }
-            
-            function showSlides(n) {
-              var i;
-              var slides = document.getElementsByClassName("mySlides");
-              var dots = document.getElementsByClassName("dot");
-              if (n > slides.length) {slideIndex = 1}    
-              if (n < 1) {slideIndex = slides.length}
-              for (i = 0; i < slides.length; i++) {
-                  slides[i].style.display = "none";  
-              }
-              for (i = 0; i < dots.length; i++) {
-                  dots[i].className = dots[i].className.replace(" active1", "");
-              }
-              slides[slideIndex-1].style.display = "block";  
-              dots[slideIndex-1].className += " active1";
-            }
-            </script>
+        <!-- Slideshow JS-->
+        <script src="js/slideshow.js"></script>
+        <!-- Modal JS-->
+        <script src="js/modal.js"></script>
+        <!-- Home data & animations -->
+        <script src="js/home.js"></script>
         
     </body>
 </html>
