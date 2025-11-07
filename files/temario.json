@@ -1,0 +1,303 @@
+{
+  "etapas": [
+    {
+      "numero": 1,
+      "nombre": "Etapa 1",
+      "temas": [
+        {
+          "nombre": "Entrada/Salida",
+          "material": [
+            {
+              "nombre": "Tema 1: Entrada/Salida",
+              "url": "files/Material/Etapa_1/1_Entrada_Salida.pdf",
+              "download": "Etapa 1 - Entrada/Salida"
+            }
+          ],
+          "problemas": [
+            {
+              "nombre": "Hola, Mundo!",
+              "url": "https://omegaup.com/arena/problem/CR-Hola-mundo/",
+              "video": {
+                "url": "https://www.youtube.com/watch?v=d4NeskKRIt0",
+                "visible": true
+              }
+            },
+            {
+              "nombre": "Imprimiendo Variables",
+              "url": "https://omegaup.com/arena/problem/CR-Imprimiendo-Variables/",
+              "video": {
+                "url": "https://youtu.be/ZJY6iG7s0ug",
+                "visible": true
+              }
+            },
+            {
+              "nombre": "Clasico A + B",
+              "url": "https://omegaup.com/arena/problem/Clasico-A--B-/",
+              "video": {
+                "url": "https://youtu.be/ZuMYjpWCJ_4",
+                "visible": true
+              }
+            },
+            {
+              "nombre": "Diferencia de productos",
+              "url": "https://omegaup.com/arena/problem/Diferencia-de-productos/",
+              "video": {
+                "url": "https://youtu.be/fMT-dy2vufY",
+                "visible": true
+              }
+            },
+            {
+              "nombre": "Evaluando una fórmula gigante",
+              "url": "https://omegaup.com/arena/problem/Evaluando-una-formula-gigante/",
+              "video": {
+                "url": "https://youtu.be/CXGE3nMY_MM",
+                "visible": true
+              }
+            },
+            {
+              "nombre": "Bajando los caracteres",
+              "url": "https://omegaup.com/arena/problem/Bajando-los-caracteres/",
+              "video": {
+                "url": "",
+                "visible": false
+              }
+            }
+          ]
+        },
+        {
+          "nombre": "Tipos de Datos",
+          "material": [
+            {
+              "nombre": "Tema 2: Tipos de Datos",
+              "url": "files/Material/Etapa_1/2_Tipos_Datos.pdf",
+              "download": "Etapa 1 - Tipos de Datos"
+            }
+          ],
+          "problemas": [
+            {
+              "nombre": "Porque podemos programar",
+              "url": "https://omegaup.com/arena/problem/Porque-podemos-programar/",
+              "video": {
+                "url": "",
+                "visible": false
+              }
+            },
+            {
+              "nombre": "Chicharronera",
+              "url": "https://omegaup.com/arena/problem/formula_general/",
+              "video": {
+                "url": "",
+                "visible": false
+              }
+            }
+          ]
+        },
+        {
+          "nombre": "Condicionales",
+          "material": [
+            {
+              "nombre": "Tema 3: Condicionales",
+              "url": "files/Material/Etapa_1/3_Condicionales.pdf",
+              "download": "Etapa 1 - Condicionales"
+            }
+          ],
+          "problemas": [
+            {
+              "nombre": "Watermelon",
+              "url": "https://omegaup.com/arena/problem/Watermel/",
+              "video": {
+                "url": "",
+                "visible": false
+              }
+            },
+            {
+              "nombre": "Mostrar los números pares que estén en el rango de los números n y m.",
+              "url": "https://omegaup.com/arena/problem/Mostrar-los-numeros-pares-rango/",
+              "video": {
+                "url": "",
+                "visible": false
+              }
+            },
+            {
+              "nombre": "Maxima calificación",
+              "url": "https://omegaup.com/arena/problem/Maxima-calificacion/",
+              "video": {
+                "url": "",
+                "visible": false
+              }
+            },
+            {
+              "nombre": "El flojo",
+              "url": "https://omegaup.com/arena/problem/El-flojo/",
+              "video": {
+                "url": "",
+                "visible": false
+              }
+            }
+          ]
+        },
+        {
+          "nombre": "Ciclos",
+          "material": [
+            {
+              "nombre": "Tema 4: Ciclos",
+              "url": "files/Material/Etapa_1/4_Ciclos.pdf",
+              "download": "Etapa 1 - Ciclos"
+            }
+          ],
+          "problemas": [
+            {
+              "nombre": "Suma de N",
+              "url": "https://omegaup.com/arena/problem/Suma-de-N/",
+              "video": {
+                "url": "",
+                "visible": false
+              }
+            },
+            {
+              "nombre": "Multiplos dentro de un intervalo",
+              "url": "https://omegaup.com/arena/problem/MDUI-UAMA/",
+              "video": {
+                "url": "",
+                "visible": false
+              }
+            }
+          ]
+        },
+        {
+          "nombre": "Métodos/Funciones",
+          "material": [
+            {
+              "nombre": "Tema 5: Funciones",
+              "url": "files/Material/Etapa_1/5_Funciones.pdf",
+              "download": "Etapa 1 - Funciones"
+            }
+          ],
+          "problemas": []
+        }
+      ]
+    },
+    {
+      "numero": 2,
+      "nombre": "Etapa 2",
+      "temas": [
+        {
+          "nombre": "Arreglos",
+          "material": [],
+          "problemas": []
+        },
+        {
+          "nombre": "Vectores",
+          "material": [],
+          "problemas": []
+        },
+        {
+          "nombre": "Matrices",
+          "material": [],
+          "problemas": []
+        }
+      ]
+    },
+    {
+      "numero": 3,
+      "nombre": "Etapa 3",
+      "temas": [
+        {
+          "nombre": "Teoría de Números",
+          "subtemas": [
+            "Divisibilidad",
+            "Primalidad",
+            "Paridad",
+            "Cribas",
+            "MCD y mcm",
+            "Exponenciación",
+            "Aritmética Modular",
+            "Bases Numéricas"
+          ],
+          "material": [],
+          "problemas": []
+        },
+        {
+          "nombre": "Pilas",
+          "material": [],
+          "problemas": []
+        },
+        {
+          "nombre": "Colas",
+          "material": [],
+          "problemas": []
+        }
+      ]
+    },
+    {
+      "numero": 4,
+      "nombre": "Etapa 4",
+      "temas": [
+        {
+          "nombre": "Estructuras",
+          "material": [],
+          "problemas": []
+        },
+        {
+          "nombre": "Ventanas Deslizantes/Two Pointers",
+          "material": [],
+          "problemas": []
+        },
+        {
+          "nombre": "Complejidad",
+          "material": [],
+          "problemas": []
+        }
+      ]
+    },
+    {
+      "numero": 5,
+      "nombre": "Etapa 5",
+      "temas": [
+        {
+          "nombre": "Recursión",
+          "material": [],
+          "problemas": []
+        },
+        {
+          "nombre": "Búsqueda Binaria",
+          "material": [],
+          "problemas": []
+        }
+      ]
+    },
+    {
+      "numero": 6,
+      "nombre": "Etapa 6",
+      "temas": [
+        {
+          "nombre": "Búsqueda Profundidad",
+          "material": [],
+          "problemas": []
+        },
+        {
+          "nombre": "Búsqueda Amplitud",
+          "material": [],
+          "problemas": []
+        }
+      ]
+    },
+    {
+      "numero": 7,
+      "nombre": "Etapa 7",
+      "temas": [
+        {
+          "nombre": "Árboles Binarios de Búsqueda",
+          "material": [],
+          "problemas": []
+        },
+        {
+          "nombre": "Programación Dinémica/DP",
+          "material": [],
+          "problemas": []
+        }
+      ]
+    }
+  ]
+}
+
