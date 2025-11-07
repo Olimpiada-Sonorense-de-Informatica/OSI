@@ -46,11 +46,12 @@
                     col.setAttribute('data-animate', 'fade-up');
 
                     const icon = noticia.icono === 'calendar' ? 'fa-calendar' : noticia.icono || 'fa-bullhorn';
+                    const iconSlug = (noticia.icono || 'bullhorn').replace(/^fa-/, '');
 
                     col.innerHTML = [
                         '<span class="fa-stack fa-4x">',
                         '  <i class="fas fa-circle fa-stack-2x text-primary"></i>',
-                        `  <i class="fas fa-${icon} fa-stack-1x fa-inverse"></i>`,
+                        `  <i class="fas fa-${iconSlug} fa-stack-1x fa-inverse"></i>`,
                         '</span>',
                         `<h4 class="my-3">${noticia.titulo || ''}</h4>`,
                         '<p class="text-muted">',
