@@ -6,14 +6,18 @@
     "participantes": [
       {
         "nombre": "Allison Avril Morales Gracian",
-        "medalla": "bronce",
+        "medalla": "plata",
         "perfil": "https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_6064"
       },
-      { "nombre": "Ángel Iván Hernández Maya" },
-      { "nombre": "Vannia Magdalena García Castañeda" }
+      {
+        "nombre": "Ángel Iván Hernández Maya"
+      },
+      {
+        "nombre": "Vannia Magdalena García Castañeda"
+      }
     ],
-    "resultadoUrl": "https://www.olimpiadadeinformatica.org.mx/Resultados/Olimpiada/Resultados?clave=30",
-    "tipo": "presencial"
+    "tipo": "presencial",
+    "resultadoUrl": "https://www.olimpiadadeinformatica.org.mx/Resultados/Olimpiada/Resultados?clave=30"
   },
   {
     "anio": 2024,
@@ -30,8 +34,12 @@
         "medalla": "bronce",
         "perfil": "https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_15181"
       },
-      { "nombre": "Mariana Itzel Ayala Pinto" },
-      { "nombre": "Joshua David Tominaga Nuñez" }
+      {
+        "nombre": "Mariana Itzel Ayala Pinto"
+      },
+      {
+        "nombre": "Joshua David Tominaga Nuñez"
+      }
     ],
     "resultadoUrl": "https://www.olimpiadadeinformatica.org.mx/Resultados/Olimpiada/Resultados?clave=29",
     "tipo": "en-linea"
@@ -46,13 +54,17 @@
         "medalla": "bronce",
         "perfil": "https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_6064"
       },
-      { "nombre": "Damián Alejandro García Oceguera" },
+      {
+        "nombre": "Damián Alejandro García Oceguera"
+      },
       {
         "nombre": "Gabriel Alejandro López Torres",
         "medalla": "bronce",
         "perfil": "https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=278413"
       },
-      { "nombre": "Omar Osvaldo Robles Osuna" }
+      {
+        "nombre": "Omar Osvaldo Robles Osuna"
+      }
     ],
     "resultadoUrl": "https://www.olimpiadadeinformatica.org.mx/Resultados/Olimpiada/Resultados?clave=28",
     "tipo": "presencial"
@@ -72,9 +84,15 @@
         "medalla": "bronce",
         "perfil": "https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=278413"
       },
-      { "nombre": "Gabriel José Gallardo Favela" },
-      { "nombre": "Jimena De la Luz Gracia" },
-      { "nombre": "José Daniel Valles Cervantes" }
+      {
+        "nombre": "Gabriel José Gallardo Favela"
+      },
+      {
+        "nombre": "Jimena De la Luz Gracia"
+      },
+      {
+        "nombre": "José Daniel Valles Cervantes"
+      }
     ],
     "resultadoUrl": "https://www.olimpiadadeinformatica.org.mx/Resultados/Olimpiada/Resultados?clave=27",
     "tipo": "en-linea"
@@ -94,8 +112,12 @@
         "medalla": "bronce",
         "perfil": "https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_6070"
       },
-      { "nombre": "Allison Avril Morales Gracian" },
-      { "nombre": "Armando Orozco Villegas" }
+      {
+        "nombre": "Allison Avril Morales Gracian"
+      },
+      {
+        "nombre": "Armando Orozco Villegas"
+      }
     ],
     "resultadoUrl": "https://www.olimpiadadeinformatica.org.mx/Resultados/Olimpiada/Resultados?clave=26",
     "tipo": "en-linea"
@@ -115,8 +137,12 @@
         "medalla": "bronce",
         "perfil": "https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_5392"
       },
-      { "nombre": "Martín Alain Aguirre Hernández" },
-      { "nombre": "Diego Sánchez Luna" }
+      {
+        "nombre": "Martín Alain Aguirre Hernández"
+      },
+      {
+        "nombre": "Diego Sánchez Luna"
+      }
     ],
     "resultadoUrl": "https://www.olimpiadadeinformatica.org.mx/Resultados/Olimpiada/Resultados?clave=25",
     "tipo": "en-linea"
@@ -165,8 +191,12 @@
         "medalla": "bronce",
         "perfil": "https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=187389"
       },
-      { "nombre": "Abraham Eduardo Quintana García" },
-      { "nombre": "Manuel Eduardo Ochoa Obezo" }
+      {
+        "nombre": "Abraham Eduardo Quintana García"
+      },
+      {
+        "nombre": "Manuel Eduardo Ochoa Obezo"
+      }
     ],
     "resultadoUrl": "https://www.olimpiadadeinformatica.org.mx/Resultados/Olimpiada/Resultados?clave=23",
     "tipo": "presencial"
@@ -176,10 +206,18 @@
     "sede": "Querétaro, Querétaro",
     "imagen": "assets/img/about/queretaro.jpg",
     "participantes": [
-      { "nombre": "Marlene Rodriguez Harms" },
-      { "nombre": "Lizbeth Ortiz López" },
-      { "nombre": "Daniel Adolfo Trinidad Reyes" },
-      { "nombre": "Gladys Patricia Vega Corral" }
+      {
+        "nombre": "Marlene Rodriguez Harms"
+      },
+      {
+        "nombre": "Lizbeth Ortiz López"
+      },
+      {
+        "nombre": "Daniel Adolfo Trinidad Reyes"
+      },
+      {
+        "nombre": "Gladys Patricia Vega Corral"
+      }
     ],
     "resultadoUrl": "https://www.olimpiadadeinformatica.org.mx/Resultados/Olimpiada/Resultados?clave=22",
     "tipo": "presencial"
@@ -204,7 +242,9 @@
         "medalla": "bronce",
         "perfil": "https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_1792"
       },
-      { "nombre": "José Fernando Parra Rodríguez" }
+      {
+        "nombre": "José Fernando Parra Rodríguez"
+      }
     ],
     "resultadoUrl": "https://www.olimpiadadeinformatica.org.mx/Resultados/Olimpiada/Resultados?clave=21",
     "tipo": "presencial"
@@ -219,9 +259,15 @@
         "medalla": "bronce",
         "perfil": "https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_1582"
       },
-      { "nombre": "Pedro Sandoval Torres" },
-      { "nombre": "José Fernando Parra Rodríguez" },
-      { "nombre": "José Andrés Barceló Fimbres" }
+      {
+        "nombre": "Pedro Sandoval Torres"
+      },
+      {
+        "nombre": "José Fernando Parra Rodríguez"
+      },
+      {
+        "nombre": "José Andrés Barceló Fimbres"
+      }
     ],
     "resultadoUrl": "https://www.olimpiadadeinformatica.org.mx/Resultados/Olimpiada/Resultados?clave=20",
     "tipo": "presencial"
@@ -241,8 +287,12 @@
         "medalla": "bronce",
         "perfil": "https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_2266"
       },
-      { "nombre": "Jose Andres Barcelo Fimbres" },
-      { "nombre": "Rafael Alan Orozco Mulfinger" }
+      {
+        "nombre": "Jose Andres Barcelo Fimbres"
+      },
+      {
+        "nombre": "Rafael Alan Orozco Mulfinger"
+      }
     ],
     "resultadoUrl": "https://www.olimpiadadeinformatica.org.mx/Resultados/Olimpiada/Resultados?clave=19",
     "tipo": "presencial"
@@ -306,7 +356,9 @@
         "medalla": "bronce",
         "perfil": "https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_3247"
       },
-      { "nombre": "Jesús Martín Soto Cruz" }
+      {
+        "nombre": "Jesús Martín Soto Cruz"
+      }
     ],
     "resultadoUrl": "https://www.olimpiadadeinformatica.org.mx/Resultados/Olimpiada/Resultados?clave=17",
     "tipo": "presencial"
@@ -359,4 +411,3 @@
     "tipo": "presencial"
   }
 ]
-
