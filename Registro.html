@@ -116,6 +116,70 @@
             @media only screen and (max-width: 300px) {
               .prev, .next,.text {font-size: 11px}
             }
+
+            /* Estilos para el contenedor del iframe */
+            .iframe-container {
+                position: relative;
+                width: 100%;
+                max-width: 800px;
+                margin: 0 auto;
+                padding: 20px;
+                min-height: 500px;
+            }
+
+            .google-form-iframe {
+                width: 100%;
+                border: none;
+                min-height: 500px;
+                display: block;
+                background-color: #f8f9fa;
+            }
+
+            .iframe-loading {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 10;
+            }
+
+            .iframe-loading.hidden {
+                display: none;
+            }
+
+            .iframe-error {
+                display: none;
+                text-align: center;
+                padding: 40px 20px;
+                background-color: #f8f9fa;
+                border-radius: 5px;
+                margin: 20px 0;
+            }
+
+            .iframe-error.show {
+                display: block;
+            }
+
+            .iframe-error .btn {
+                margin-top: 15px;
+            }
+
+            /* Responsive para móviles */
+            @media (max-width: 768px) {
+                .iframe-container {
+                    padding: 10px;
+                }
+                
+                .google-form-iframe {
+                    min-height: 400px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                .iframe-container {
+                    padding: 5px;
+                }
+            }
         </style>
     </head>
     <body>
@@ -143,12 +207,42 @@
                     <h2 class="section-heading text-uppercase">Registro</h2>
                     <h3 class="section-subheading text-muted">Regístrate y responde el examen de lógica aquí mismo.</h3>
                 </div>
-                <div class="card mb-3" style="text-align: center; align-content: center; align-items: center;">
+                <div class="card mb-3">
                     <div class="card-body">
-                        <h5 class="card-title">Olimpiada Sonorense de Informática 2026</h5>
+                        <h5 class="card-title text-center">Olimpiada Sonorense de Informática 2026</h5>
                     </div>
-                    <iframe style="text-align: center; align-items: center;align-content: center;" src="https://forms.gle/xKJYqvfMGTbzpZLL9" width="640" height="3019" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-                  </div>
+                    <div class="iframe-container">
+                        <!-- Indicador de carga -->
+                        <div class="iframe-loading" id="iframe-loading">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="sr-only">Cargando formulario...</span>
+                            </div>
+                            <p class="mt-3 text-muted">Cargando formulario...</p>
+                        </div>
+                        
+                        <!-- Mensaje de error (oculto por defecto) -->
+                        <div class="iframe-error" id="iframe-error">
+                            <i class="fas fa-exclamation-triangle fa-3x text-warning mb-3"></i>
+                            <h5>No se pudo cargar el formulario</h5>
+                            <p class="text-muted">Por favor, intenta nuevamente o accede directamente al formulario.</p>
+                            <a href="https://forms.gle/xKJYqvfMGTbzpZLL9" target="_blank" class="btn btn-primary">
+                                <i class="fas fa-external-link-alt mr-2"></i>Abrir formulario en nueva pestaña
+                            </a>
+                        </div>
+                        
+                        <!-- Iframe del formulario de Google -->
+                        <iframe 
+                            id="google-form-iframe"
+                            class="google-form-iframe"
+                            src="https://forms.gle/xKJYqvfMGTbzpZLL9"
+                            title="Formulario de Registro - Olimpiada Sonorense de Informática 2026"
+                            allowfullscreen
+                            aria-label="Formulario de registro para la Olimpiada Sonorense de Informática 2026">
+                            Tu navegador no soporta iframes. Por favor, 
+                            <a href="https://forms.gle/xKJYqvfMGTbzpZLL9" target="_blank">abre el formulario en una nueva pestaña</a>.
+                        </iframe>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -177,5 +271,80 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
       <!-- Core theme JS-->
       <script src="js/scripts.js"></script>
+      <script>
+          $(document).ready(function() {
+              var iframe = document.getElementById('google-form-iframe');
+              var loadingIndicator = document.getElementById('iframe-loading');
+              var errorMessage = document.getElementById('iframe-error');
+              var loadTimeout;
+              
+              // Función para ocultar el indicador de carga
+              function hideLoading() {
+                  if (loadingIndicator) {
+                      loadingIndicator.classList.add('hidden');
+                  }
+              }
+              
+              // Función para mostrar el error
+              function showError() {
+                  hideLoading();
+                  if (errorMessage) {
+                      errorMessage.classList.add('show');
+                  }
+                  if (iframe) {
+                      iframe.style.display = 'none';
+                  }
+              }
+              
+              // Detectar cuando el iframe carga exitosamente
+              if (iframe) {
+                  iframe.addEventListener('load', function() {
+                      clearTimeout(loadTimeout);
+                      hideLoading();
+                      if (errorMessage) {
+                          errorMessage.classList.remove('show');
+                      }
+                      if (iframe) {
+                          iframe.style.display = 'block';
+                      }
+                  });
+                  
+                  // Manejo de errores de carga
+                  iframe.addEventListener('error', function() {
+                      showError();
+                  });
+                  
+                  // Timeout: si el iframe no carga en 15 segundos, verificar estado
+                  loadTimeout = setTimeout(function() {
+                      // Verificar si el iframe realmente cargó
+                      try {
+                          // Intentar acceder al contenido del iframe
+                          // Si falla por CORS, es normal y significa que el iframe cargó
+                          if (iframe.contentWindow === null) {
+                              showError();
+                          } else {
+                              // Si hay contentWindow, asumir que cargó (CORS puede prevenir acceso al document)
+                              hideLoading();
+                          }
+                      } catch (e) {
+                          // Error de CORS es normal y significa que el iframe cargó correctamente
+                          // Solo mostrar error si es un error diferente
+                          if (e.name !== 'SecurityError' && e.name !== 'DOMException') {
+                              showError();
+                          } else {
+                              hideLoading();
+                          }
+                      }
+                  }, 15000);
+              }
+              
+              // Fallback: si después de 20 segundos aún está cargando, mostrar error
+              setTimeout(function() {
+                  if (loadingIndicator && !loadingIndicator.classList.contains('hidden')) {
+                      showError();
+                  }
+              }, 20000);
+          });
+      </script>
     </body>
 </html>
