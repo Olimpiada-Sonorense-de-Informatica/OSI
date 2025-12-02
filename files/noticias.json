@@ -1,9 +1,21 @@
 [
   {
+    "titulo": "Resultados Etapa 1",
+    "descripcion": [
+      "Ya se encuentra disponible los resultados y seleccionados de la OSI 2026."
+    ],
+    "cta": {
+      "texto": "Ver Resultados",
+      "url": "Resultados2026.html",
+      "externo": false
+    },
+    "icono": "bullhorn"
+  },
+  {
     "titulo": "Mantente en contacto",
     "descripcion": [
       "Únete al canal de Discord.",
-      "El día 29 de Noviembre comienzan las sesiones virtuales en el servidor de Discord."
+      "El día 6 de Diciembre comienzan las sesiones virtuales en el servidor de Discord."
     ],
     "cta": {
       "texto": "Unirme",
@@ -11,12 +23,5 @@
       "externo": true
     },
     "icono": "calendar"
-  },
-  {
-    "titulo": "Convocatoria Abierta",
-    "descripcion": [
-      "Ya se encuentra disponible la convocatoria 2026."
-    ],
-    "icono": "bullhorn"
-  }
+  }  
 ]
