@@ -26,7 +26,7 @@ function refreshTable(){
             content1 += "<td>" + cell + "</td>" ;
         });
         content1 += "</tr>";
-        if(content1.indexOf(obj) == -1)
+        if(content1.toLowerCase().indexOf(obj.toLowerCase()) == -1)
             valido = false;
         if(valido)
             content+=content1;
