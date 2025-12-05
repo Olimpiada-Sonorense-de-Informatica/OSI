@@ -1,439 +1,489 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Olimpiada Sonorense de Informática (OSI) - Concurso estatal para jóvenes con facilidad para resolver problemas mediante la lógica y programación. Promueve el desarrollo tecnológico en Sonora." />
-        <meta name="author" content="Olimpiada Sonorense de Informática" />
-        <meta name="keywords" content="OSI, Olimpiada Sonorense de Informática, programación competitiva, Sonora, informática, olimpiada, programación" />
-        <title>Olimpiada Sonorense de Informática</title>
-        <link rel="icon" type="image/x-icon" href="assets/img/logoOsi.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://kit.fontawesome.com/a66da4d30a.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="css/styles.css" rel="stylesheet" />
-        <style>
-            * {box-sizing: border-box}
-            body {font-family: Verdana, sans-serif; margin:0}
-            .mySlides {display: block}
-            img {
-                vertical-align: middle;
-                max-height: 500px;
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description"
+        content="Olimpiada Sonorense de Informática (OSI) - Concurso estatal para jóvenes con facilidad para resolver problemas mediante la lógica y programación. Promueve el desarrollo tecnológico en Sonora." />
+    <meta name="author" content="Olimpiada Sonorense de Informática" />
+    <meta name="keywords"
+        content="OSI, Olimpiada Sonorense de Informática, programación competitiva, Sonora, informática, olimpiada, programación" />
+    <title>Olimpiada Sonorense de Informática</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/logoOsi.ico" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://kit.fontawesome.com/a66da4d30a.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 0
+        }
+
+        .mySlides {
+            display: block
+        }
+
+        img {
+            vertical-align: middle;
+            max-height: 500px;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: black;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 10px;
+            width: 10px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active1,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade1 {
+            -webkit-animation-name: fade1;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade1;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade1 {
+            from {
+                opacity: .4
             }
-            
-            /* Slideshow container */
-            .slideshow-container {
-              max-width: 1000px;
-              position: relative;
-              margin: auto;
+
+            to {
+                opacity: 1
             }
-            
-            /* Next & previous buttons */
-            .prev, .next {
-              cursor: pointer;
-              position: absolute;
-              top: 50%;
-              width: auto;
-              padding: 16px;
-              margin-top: -22px;
-              color: black;
-              font-weight: bold;
-              font-size: 18px;
-              transition: 0.6s ease;
-              border-radius: 0 3px 3px 0;
-              user-select: none;
+        }
+
+        @keyframes fade1 {
+            from {
+                opacity: .4
             }
-            
-            /* Position the "next button" to the right */
-            .next {
-              right: 0;
-              border-radius: 3px 0 0 3px;
+
+            to {
+                opacity: 1
             }
-            
-            /* On hover, add a black background color with a little bit see-through */
-            .prev:hover, .next:hover {
-              background-color: rgba(0,0,0,0.8);
-            }
-            
-            /* Caption text */
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+
+            .prev,
+            .next,
             .text {
-              color: #f2f2f2;
-              font-size: 15px;
-              padding: 8px 12px;
-              position: absolute;
-              bottom: 8px;
-              width: 100%;
-              text-align: center;
+                font-size: 11px
             }
-            
-            /* Number text (1/3 etc) */
-            .numbertext {
-              color: #f2f2f2;
-              font-size: 12px;
-              padding: 8px 12px;
-              position: absolute;
-              top: 0;
-            }
-            
-            /* The dots/bullets/indicators */
-            .dot {
-              cursor: pointer;
-              height: 10px;
-              width: 10px;
-              margin: 0 2px;
-              background-color: #bbb;
-              border-radius: 50%;
-              display: inline-block;
-              transition: background-color 0.6s ease;
-            }
-            
-            .active1, .dot:hover {
-              background-color: #717171;
-            }
-            
-            /* Fading animation */
-            .fade1 {
-              -webkit-animation-name: fade1;
-              -webkit-animation-duration: 1.5s;
-              animation-name: fade1;
-              animation-duration: 1.5s;
-            }
-            
-            @-webkit-keyframes fade1 {
-              from {opacity: .4} 
-              to {opacity: 1}
-            }
-            
-            @keyframes fade1 {
-              from {opacity: .4} 
-              to {opacity: 1}
-            }
-            
-            /* On smaller screens, decrease text size */
-            @media only screen and (max-width: 300px) {
-              .prev, .next,.text {font-size: 11px}
-            }
-            
-            /* Navbar brand styles */
-            .navbar-brand-logo {
-                font-size: 40px;
-                font-weight: bold;
-            }
-            
-            .navbar-brand-logo img {
-                height: 50px;
-                margin-right: 10px;
-                vertical-align: middle;
-            }
-            
-            /* Navbar button styles */
-            .nav-link.btn {
-                margin-left: 5px;
-                color: white !important;
-            }
-            
-            /* Section spacing */
-            .section-spacer {
-                height: 100px;
-            }
-            
-            /* Noticias section */
-            .noticias-title {
-                color: red;
-            }
-            
-            /* Slideshow images */
-            .slideshow-container img {
-                width: 100%;
-            }
-            
-            /* Slideshow dots container */
-            .slideshow-dots {
-                text-align: center;
-            }
-            
-            /* Slide animation helpers */
-            [data-animate] {
-                opacity: 0;
-                transform: translateY(30px);
-                transition: opacity 0.6s ease, transform 0.6s ease;
-            }
+        }
 
-            [data-animate].is-visible {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        /* Navbar brand styles */
+        .navbar-brand-logo {
+            font-size: 40px;
+            font-weight: bold;
+        }
 
-            .timeline-participante {
-                display: block;
-                margin-bottom: 0.35rem;
-            }
+        .navbar-brand-logo img {
+            height: 50px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
 
-            .timeline-participante:last-child {
-                margin-bottom: 0;
-            }
-        </style>
-    </head>
-    <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand navbar-brand-logo js-scroll-trigger" href="#page-top">
-                    <img src="assets/img/logsi.svg" alt="Logo Olimpiada Sonorense de Informática" />
-                    OSI
-                </a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars ml-1"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ml-auto">
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#advise">Noticias</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Acerca de</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Podio</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Equipo</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contáctanos</a></li>
-                        <li class="nav-item"><a class="nav-link btn btn-info" href="Temario.html">Temario</a></li>
-                        <li class="nav-item"><a class="nav-link btn btn-success" href="Resultados2026.html" id="btnResultados">Resultados</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <!-- Services-->
-        <div class="section-spacer"></div>
+        /* Navbar button styles */
+        .nav-link.btn {
+            margin-left: 5px;
+            color: white !important;
+        }
 
-        <section class="page-section" id="advise" data-animate="fade-up">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="noticias-title">NOTICIAS</h2>
-                    <hr>
-                </div>
-                <div class="row text-center" id="noticias-container"></div>
-                <div class="text-center text-muted" id="noticias-empty" hidden>Pronto tendremos noticias para compartir.</div>
-            </div>
-        </section>
+        /* Section spacing */
+        .section-spacer {
+            height: 100px;
+        }
 
-        <div class="slideshow-container" data-animate="fade-up">
+        /* Noticias section */
+        .noticias-title {
+            color: red;
+        }
 
-            <div class="mySlides fade1">
-              <img src="assets/img/header-bg.jpg" alt="Olimpiada Sonorense de Informática">
-            </div>
-            
-            <div class="mySlides fade1">
-              <img src="assets/img/portfolio/Medallas.jpg" alt="Medallas OSI" loading="lazy" decoding="async">
-            </div>
-            
-            <div class="mySlides fade1">
-              <img src="assets/img/portfolio/Taller.jpg" alt="Taller OSI" loading="lazy" decoding="async">
-            </div>
-            
-            <div class="mySlides fade1">
-                <img src="assets/img/portfolio/Del2023.png" alt="Delegación OSI 2023" loading="lazy" decoding="async">
-              </div>
-            
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            
-        </div>
-        <br>
-            
-        <div class="slideshow-dots">
-            <span class="dot" onclick="currentSlide(1)"></span> 
-            <span class="dot" onclick="currentSlide(2)"></span> 
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>  
-        </div>
+        /* Slideshow images */
+        .slideshow-container img {
+            width: 100%;
+        }
 
-        <section class="page-section" id="services" data-animate="fade-up">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">¿Qué es la OSI?</h2>
-                    <p>La Olimpiada Sonorense de Informática (OSI) es un concurso 
-                        a nivel estatal para jóvenes con facilidad para resolver problemas prácticos mediante la lógica 
-                        y el uso de computadoras, que busca promover el desarrollo tecnológico en Sonora y encontrar 
-                        a los mejores programadores, quienes formarán la selección Sonorense para participar en las próximas 
-                        Olimpiadas Nacionales de Informática (OMI).
-                    </p>
-                    <p> 
-                        La OSI es un concurso en el que sobre todo se requiere tener facilidad, 
-                        habilidad y voluntad de resolver problemas, utilizando la lógica, el ingenio y las computadoras.
-                    </p>
-                </div>
-                <div class="row text-center">
-                    <div class="col-md-6">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-microchip fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">C++</h4>
-                        <p class="text-muted">
-                            C++ es un lenguaje de programación hibrido diseñado a mediados de los años 80 por Bjarne Stroustrup. La intención 
-                            de su creación fue el extender al exitoso lenguaje de programación C con mecanismos que permitieran 
-                            la manipulación de objetos. 
-                            </p>
-                    </div>
-                    <div class="col-md-6">
-                        <span class="fa-stack fa-4x">
-                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
-                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
-                        </span>
-                        <h4 class="my-3">Programación competitiva</h4>
-                        <p class="text-muted">Es un deporte mental en el cual los participantes resuelven un conjunto de problemas bien especificados a través de programas de computador.</p>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
+        /* Slideshow dots container */
+        .slideshow-dots {
+            text-align: center;
+        }
 
-        <!-- Podio / Nuestra historia-->
-        <section class="page-section" id="about" data-animate="fade-up">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Podio</h2>
-                    <h3 class="section-subheading text-muted">Conoce a nuestros medallistas nacionales.</h3>
-                </div>
-                <ul class="timeline" id="timeline">
-                    <li class="timeline-inverted timeline-hero" data-animate="fade-up">
-                        <div class="timeline-image">
-                            <h4>
-                                ¡Tú puedes 
-                                <br />
-                                convertirte 
-                                <br />
-                                en héroe!
-                            </h4>
-                        </div>
-                    </li>
+        /* Slide animation helpers */
+        [data-animate] {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        [data-animate].is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .timeline-participante {
+            display: block;
+            margin-bottom: 0.35rem;
+        }
+
+        .timeline-participante:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand navbar-brand-logo js-scroll-trigger" href="#page-top">
+                <img src="assets/img/logsi.svg" alt="Logo Olimpiada Sonorense de Informática" />
+                OSI
+            </a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ml-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ml-auto">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#advise">Noticias</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Acerca de</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Podio</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#team">Equipo</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contáctanos</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-info" href="Temario.html">Temario</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-success" href="Results.html"
+                            id="btnResultados">Resultados</a></li>
                 </ul>
             </div>
-        </section>
-        <!-- Team-->
-        <section class="page-section bg-light" id="team" data-animate="fade-up">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">
-                        NUESTRO INCREÍBLE EQUIPO</h2>
-                    <h3 class="section-subheading text-muted">Somos un equipo de voluntarios exolímpicos que buscamos 
-                        brindarte las mejores herramientas para que también tu puedas convertirte en un héroe.</h3>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/imgandy.jpg" alt="Andrea Karolina Andujo Vega" loading="lazy" decoding="async" />
-                            <h4>Andrea Karolina Andujo Vega</h4>
-                            <p class="text-muted">Ingeniero en Tecnologías Computacionales</p>
-                            <p class="text-muted">Diseño y Marketing</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/imgfernando.png" alt="José Fernando Parra Rodríguez" loading="lazy" decoding="async" />
-                            <h4>José Fernando Parra Rodríguez</h4>
-                            <p class="text-muted">Ingeniero en Software</p>
-                            <p class="text-muted">Desarrollo y Equipo Académico</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/imgneto.jpg" alt="Ernesto Adrián Álvarez Salazar" loading="lazy" decoding="async" />
-                            <h4>Ernesto Adrián Álvarez Salazar</h4>
-                            <p class="text-muted">Ingeniero en Tecnologías Computacionales</p>
-                            <p class="text-muted">Líder Estatal y Subdirector Académico</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/imgmauel.jpg" alt="Manuel Alejandro Quintana García" loading="lazy" decoding="async" />
-                            <h4>Manuel Alejandro Quintana García</h4>
-                            <p class="text-muted">Maestro en Ciencias de la Ingeniería</p>
-                            <p class="text-muted">Delegado Estatal y Director Académico</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="assets/img/team/imgRamon.jpg" alt="Mtro. Ramón Alberto Leyva Rodríguez" loading="lazy" decoding="async" />
-                            <h4>Mtro. Ramón Alberto Leyva Rodríguez</h4>
-                            <p class="text-muted">Profesor de Tiempo Completo</p>
-                            <p class="text-muted">Codelegado Estatal</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto text-center">
-                        <p class="large text-muted">"Everybody in this country should learn how to program a computer... because it teach you how to think."</p>
-                        <p class="large text-muted">-Steve jobs</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Contact-->
-        <section class="page-section" id="contact" data-animate="fade-up">
-            <div class="container">
-                <div class="text-center">
-                    <a href="mailto:informacion@osi.com.mx" class="btn btn-info">Contáctanos</a>
-                </div>
-            </div>
-            
-        </section>
-        <!-- Footer-->
-        <footer class="footer py-4">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-left">Copyright © Olimpiada Sonorense de Informática 2026</div>
-                    <div class="col-lg-4 my-3 my-lg-0">
-                        <!--<a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>-->
-                        <a class="btn btn-dark btn-social mx-2" href="https://web.facebook.com/ComiteOSI/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-                        <!--<a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>-->
-                    </div>
-                    <div class="col-lg-4 text-lg-right">
-                        <a class="mr-3" hidden href="#!">Política de privacidad</a>
-                        <a href="#!" hidden>Términos de uso</a>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        </div>
+    </nav>
+    <!-- Services-->
+    <div class="section-spacer"></div>
 
-        <!-- Modal Convocatoria -->
-        <div class="modal fade" id="modalConvocatoria" tabindex="-1" role="dialog" aria-labelledby="modalConvocatoriaLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modalConvocatoriaLabel">Convocatoria OSI 2026</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
+    <section class="page-section" id="advise" data-animate="fade-up">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="noticias-title">NOTICIAS</h2>
+                <hr>
+            </div>
+            <div class="row text-center" id="noticias-container"></div>
+            <div class="text-center text-muted" id="noticias-empty" hidden>Pronto tendremos noticias para compartir.
+            </div>
+        </div>
+    </section>
+
+    <div class="slideshow-container" data-animate="fade-up">
+
+        <div class="mySlides fade1">
+            <img src="assets/img/header-bg.jpg" alt="Olimpiada Sonorense de Informática">
+        </div>
+
+        <div class="mySlides fade1">
+            <img src="assets/img/portfolio/Medallas.jpg" alt="Medallas OSI" loading="lazy" decoding="async">
+        </div>
+
+        <div class="mySlides fade1">
+            <img src="assets/img/portfolio/Taller.jpg" alt="Taller OSI" loading="lazy" decoding="async">
+        </div>
+
+        <div class="mySlides fade1">
+            <img src="assets/img/portfolio/Del2023.png" alt="Delegación OSI 2023" loading="lazy" decoding="async">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+
+    <div class="slideshow-dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+    <section class="page-section" id="services" data-animate="fade-up">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">¿Qué es la OSI?</h2>
+                <p>La Olimpiada Sonorense de Informática (OSI) es un concurso
+                    a nivel estatal para jóvenes con facilidad para resolver problemas prácticos mediante la lógica
+                    y el uso de computadoras, que busca promover el desarrollo tecnológico en Sonora y encontrar
+                    a los mejores programadores, quienes formarán la selección Sonorense para participar en las próximas
+                    Olimpiadas Nacionales de Informática (OMI).
+                </p>
+                <p>
+                    La OSI es un concurso en el que sobre todo se requiere tener facilidad,
+                    habilidad y voluntad de resolver problemas, utilizando la lógica, el ingenio y las computadoras.
+                </p>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-6">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-microchip fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">C++</h4>
+                    <p class="text-muted">
+                        C++ es un lenguaje de programación hibrido diseñado a mediados de los años 80 por Bjarne
+                        Stroustrup. La intención
+                        de su creación fue el extender al exitoso lenguaje de programación C con mecanismos que
+                        permitieran
+                        la manipulación de objetos.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">Programación competitiva</h4>
+                    <p class="text-muted">Es un deporte mental en el cual los participantes resuelven un conjunto de
+                        problemas bien especificados a través de programas de computador.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Podio / Nuestra historia-->
+    <section class="page-section" id="about" data-animate="fade-up">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Podio</h2>
+                <h3 class="section-subheading text-muted">Conoce a nuestros medallistas nacionales.</h3>
+            </div>
+            <ul class="timeline" id="timeline">
+                <li class="timeline-inverted timeline-hero" data-animate="fade-up">
+                    <div class="timeline-image">
+                        <h4>
+                            ¡Tú puedes
+                            <br />
+                            convertirte
+                            <br />
+                            en héroe!
+                        </h4>
                     </div>
-                    <div class="modal-body text-center">
-                        <img class="img-fluid" id="imgConvocatoria" src="assets/img/Convocatoria2026.png" alt="Convocatoria Olimpiada Sonorense de Informática 2026" loading="lazy" decoding="async">
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- Team-->
+    <section class="page-section bg-light" id="team" data-animate="fade-up">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">
+                    NUESTRO INCREÍBLE EQUIPO</h2>
+                <h3 class="section-subheading text-muted">Somos un equipo de voluntarios exolímpicos que buscamos
+                    brindarte las mejores herramientas para que también tu puedas convertirte en un héroe.</h3>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="assets/img/team/imgandy.jpg"
+                            alt="Andrea Karolina Andujo Vega" loading="lazy" decoding="async" />
+                        <h4>Andrea Karolina Andujo Vega</h4>
+                        <p class="text-muted">Ingeniero en Tecnologías Computacionales</p>
+                        <p class="text-muted">Diseño y Marketing</p>
                     </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="assets/img/team/imgfernando.png"
+                            alt="José Fernando Parra Rodríguez" loading="lazy" decoding="async" />
+                        <h4>José Fernando Parra Rodríguez</h4>
+                        <p class="text-muted">Ingeniero en Software</p>
+                        <p class="text-muted">Desarrollo y Equipo Académico</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="assets/img/team/imgneto.jpg"
+                            alt="Ernesto Adrián Álvarez Salazar" loading="lazy" decoding="async" />
+                        <h4>Ernesto Adrián Álvarez Salazar</h4>
+                        <p class="text-muted">Ingeniero en Tecnologías Computacionales</p>
+                        <p class="text-muted">Líder Estatal y Subdirector Académico</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="assets/img/team/imgmauel.jpg"
+                            alt="Manuel Alejandro Quintana García" loading="lazy" decoding="async" />
+                        <h4>Manuel Alejandro Quintana García</h4>
+                        <p class="text-muted">Maestro en Ciencias de la Ingeniería</p>
+                        <p class="text-muted">Delegado Estatal y Director Académico</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                </div>
+                <div class="col-lg-4">
+                    <div class="team-member">
+                        <img class="mx-auto rounded-circle" src="assets/img/team/imgRamon.jpg"
+                            alt="Mtro. Ramón Alberto Leyva Rodríguez" loading="lazy" decoding="async" />
+                        <h4>Mtro. Ramón Alberto Leyva Rodríguez</h4>
+                        <p class="text-muted">Profesor de Tiempo Completo</p>
+                        <p class="text-muted">Codelegado Estatal</p>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <p class="large text-muted">"Everybody in this country should learn how to program a computer...
+                        because it teach you how to think."</p>
+                    <p class="large text-muted">-Steve jobs</p>
                 </div>
             </div>
         </div>
+    </section>
+    <!-- Contact-->
+    <section class="page-section" id="contact" data-animate="fade-up">
+        <div class="container">
+            <div class="text-center">
+                <a href="mailto:informacion@osi.com.mx" class="btn btn-info">Contáctanos</a>
+            </div>
+        </div>
 
-        <!-- Bootstrap core JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Third party plugin JS-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-        <!-- Contact form JS-->
-        <script src="assets/mail/jqBootstrapValidation.js"></script>
-        <script src="assets/mail/contact_me.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <!-- Slideshow JS-->
-        <script src="js/slideshow.js"></script>
-        <!-- Modal JS-->
-        <script src="js/modal.js"></script>
-        <!-- Home data & animations -->
-        <script src="js/home.js"></script>
-        
-    </body>
+    </section>
+    <!-- Footer-->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 text-lg-left">Copyright © Olimpiada Sonorense de Informática 2026</div>
+                <div class="col-lg-4 my-3 my-lg-0">
+                    <!--<a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>-->
+                    <a class="btn btn-dark btn-social mx-2" href="https://web.facebook.com/ComiteOSI/" target="_blank"
+                        rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <!--<a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>-->
+                </div>
+                <div class="col-lg-4 text-lg-right">
+                    <a class="mr-3" hidden href="#!">Política de privacidad</a>
+                    <a href="#!" hidden>Términos de uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Convocatoria -->
+    <div class="modal fade" id="modalConvocatoria" tabindex="-1" role="dialog" aria-labelledby="modalConvocatoriaLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalConvocatoriaLabel">Convocatoria OSI 2026</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <img class="img-fluid" id="imgConvocatoria" src="assets/img/Convocatoria2026.png"
+                        alt="Convocatoria Olimpiada Sonorense de Informática 2026" loading="lazy" decoding="async">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Third party plugin JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Contact form JS-->
+    <script src="assets/mail/jqBootstrapValidation.js"></script>
+    <script src="assets/mail/contact_me.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+    <!-- Slideshow JS-->
+    <script src="js/slideshow.js"></script>
+    <!-- Modal JS-->
+    <script src="js/modal.js"></script>
+    <!-- Home data & animations -->
+    <script src="js/home.js"></script>
+
+</body>
+
 </html>
