@@ -1,12 +1,12 @@
 [
   {
-    "titulo": "Resultados Etapa 1",
+    "titulo": "Convocatoria OSI 2027",
     "descripcion": [
-      "Ya se encuentra disponible los resultados y seleccionados de la OSI 2026."
+      "Ya se encuentra abierta la convocatoria a la OSI 2027, realiza tu registro y examen de lógica ahora mismo."
     ],
     "cta": {
-      "texto": "Ver Resultados",
-      "url": "Resultados2026.html",
+      "texto": "Ir a Registro",
+      "url": "Registro.html",
       "externo": false
     },
     "icono": "bullhorn"
@@ -15,7 +15,7 @@
     "titulo": "Mantente en contacto",
     "descripcion": [
       "Únete al canal de Discord.",
-      "El día 6 de Diciembre comienzan las sesiones virtuales en el servidor de Discord."
+      "El día 5 de Diciembre comienzan las sesiones virtuales en el servidor de Discord."
     ],
     "cta": {
       "texto": "Unirme",

@@ -1,7 +1,32 @@
 [
   {
+    "anio": 2026,
+    "sede": "Pachuca, Hidalgo",
+    "imagen": "assets/img/about/pachuca.jfif",
+    "participantes": [
+      {
+        "nombre": "Juan Manuel Aguilar Valdez"
+      },
+      {
+        "nombre": "Angel Abdiel Bojorquez Bastida",
+        "medalla": "plata",
+        "perfil": "https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_16834&tipo=OMI"
+      },
+      {
+        "nombre": "Sebastian Alvarez Flota",
+        "medalla": "bronce",
+        "perfil": "https://www.olimpiadadeinformatica.org.mx/Resultados/Profile/view?usuario=_16837&tipo=OMI"
+      },
+      {
+        "nombre": "Vannia Magdalena García Castañeda"
+      }
+    ],
+    "resultadoUrl": "https://www.olimpiadadeinformatica.org.mx/Resultados/Olimpiada/Resultados?clave=31&tipo=OMI",
+    "tipo": "presencial"
+  },
+  {
     "anio": 2025,
-    "sede": "Guadalajara",
+    "sede": "Guadalajara, Jalisco",
     "imagen": "assets/img/about/gdl.png",
     "participantes": [
       {
